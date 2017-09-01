@@ -1,3 +1,5 @@
+# Analyzing The Simpson's Quality
+
 We have already cleaned the raw IMDb data in an excel spreadsheet and we will bring it into RStudio for analysis.
 
 Begin by loading our favorite packages.
@@ -23,7 +25,7 @@ simp$season_num<-factor(simp$season_num)
 ```
 
 
-The first thing that we wonder is, well, how have the ratings evolved over time? But before we do that, I'd like to look at how the how  the voting participation has evolved over time. 
+The first thing that we wonder is, well, how have the ratings evolved over time? But before we do that, I'd like to look at how the how  the voting participation on IMDb has evolved over time. 
 
 
 
