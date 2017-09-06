@@ -4,7 +4,7 @@ We have already cleaned the raw IMDb data in an excel spreadsheet and we will br
 
 Begin by loading our favorite packages.
 
-```R
+```{r}
 install.packages("xlsx") 
 install.packages("ggplot2")
 install.packages("reshape2")
@@ -29,17 +29,17 @@ The first thing that we wonder is, well, how have the ratings evolved over time?
 
 
 
-##Plots
+## Plots
 
-###Episode Vote Number Plot
+### Episode Vote Number Plot
 
 ```R
 ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point()+ggtitle("Every Vote Counts",subtitle="IMDb Data Pulled Aug 31, 2017")+xlab("Episode Number")+ylab("Number of Votes For IMDb Score")+geom_smooth()
 ```
 
-###Episode Rate Plot
+### Episode Rate Plot
 ```R
 ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating,factor=simp$season_num))+geom_point(aes(col=season_num))+geom_smooth(method='lm',se=FALSE)
 labels<-+xlab("Episode Number")+ylab("IMDb Rating")+ggtitle("Scoring The Simpsons",subtitle="IMDb Data Pulled Aug 31, 2017")+labs(col="Season")
 ```
-###
+### 
