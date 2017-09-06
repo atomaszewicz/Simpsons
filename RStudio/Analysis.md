@@ -29,10 +29,10 @@ The first thing that we wonder is, well, how have the ratings evolved over time?
 
 We will use IMDb's breakdown of the voting demographics for their aggregated TV score by series and by episodes, found(here)[http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_]. I will start by doing the data on the series, and if I have time I can come back and analyze the changes in demographic by episode to get a better picutre of the evolution of the IMDb voting audience. 
 
-The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and who likes the series the most. Men make up over 80% of the ratings
+The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, 0.2 points higher than females. The highest score was receieved by it's core Male 18-29 demographic as well as the Male 30-44 demographic. Seeing as the show has been on air for 28 years, it makes sense that the Male 30-44 demographic would rank it so highly, as they are the group who grew up with it in syndication 
 
 
-
+the show is about to embark on it's 29th season, and at it's end, will put it above Gun Smoke's 635 episodes,
 
 ## Plots
 
