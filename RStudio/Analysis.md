@@ -29,11 +29,16 @@ The first thing that we wonder is, well, how have the ratings evolved over time?
 
 We will use IMDb's breakdown of the voting demographics for their aggregated TV score by series and by episodes, found(here)[http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_]. I will start by doing the data on the series, and if I have time I can come back and analyze the changes in demographic by episode to get a better picutre of the evolution of the IMDb voting audience. 
 
-The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Overall the series recieved a score of 8.8/10, which makes it the 54th highest rated show in IMDb.
+The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Overall the series recieved a score of 8.8/10, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact, in every age demographic, males rate the series higher. Males voted over four and half times more than females, and each age demographic is largely dominated by men. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline. We will come back to this later). The two groups that rated it the most are the male portion of the 18-29 and 30-45 year old demographics. Combined they make up almost two thirds of the votes, with the 18-29 males voting about 15% more than the 30-45 males.
 
-The highest praise was given by the male 18-29 and male 30-44 demographics, who rated the series an average of  8.9/10. It is a bit suprising that the male portion of the "core" 18-29 demo has the same net opinion as the less-important male 30-44 demo, but when you remember that The Simpsons has been on air for 28 years, and that the latter group thus up alongside the show, it makes more sense. The lowest raiting is from the female 45+ demographic giving the show a 7.9/10, which is a suprisingly high rating since much of the show's appeal is subverting the norms of the shows the 45+ demographic grew up with (although I must note that both my 45+ parents enjoy the show).
+These two groups also rated the series the highest, giving it an average score of 8.9/10. It is a bit suprising that the male portion of the "core" 18-29 demo has the same net opinion as the less-important male 30-44 demo, but when you remember that The Simpsons has been on air for 28 years, and that the latter group thus up alongside the show, it makes more sense. In fact these two groups voted a similar amount, with the 18-29 having about 15% more votes. The lowest raiting is from the female 45+ demographic, who give the show a 7.9/10, which is a suprisingly high rating since much of the show's appeal is subverting the norms of the shows that the 45+ demographic grew up with.
 
-Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females but the same as the rating over all demographics. Further, in every age demograhpic males rate the series higher than females, by an average of 0.3 points.
+Now that we've seen who is voting for the series, let's look at how the number of votes changes throughout the series.
+
+[ep_votes_plot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Analysis.md?raw=TRUE)
+
+
+
 
 
 
