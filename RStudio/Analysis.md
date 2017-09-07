@@ -35,7 +35,7 @@ These two groups also rated the series the highest, giving it an average score o
 
 Now that we've seen who is voting for the series, let's look at how the number of votes changes throughout the series.
 
-![ep_votes_plot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Analysis.md?raw=TRUE)
+![ep_votes_plot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/simp_votecount_sept6.png?raw=TRUE)
 
 
 
@@ -49,7 +49,8 @@ Now that we've seen who is voting for the series, let's look at how the number o
 ### Episode Vote Number Plot
 
 ```R
-ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=simp$season_num))+ggtitle("Every Vote Counts",subtitle="IMDb Data Pulled Aug 31, 2017")+xlab("Episode Number")+ylab("Number of Votes For IMDb Score")+geom_smooth(method='lm')+labs(col="Season")
+ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=simp$season_num))
+labels<-ggtitle("Every Vote Counts",subtitle="IMDb Data Pulled Aug 31, 2017")+xlab("Episode Number")+ylab("Number of Votes For IMDb Score")+labs(col="Season")
 ```
 
 ### Episode Rate Plot
