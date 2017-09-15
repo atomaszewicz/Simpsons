@@ -37,6 +37,8 @@ Now that we've seen who is voting for the series, let's look at how the number o
 
 ![ep_votes_plot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/simp_votecount_sept6.png?raw=TRUE)
 
+Seeing at the earlier seasons have been out for ~20 years more than the earlier episodes, it is only natural that more people have seen them, explaining the downward-trend in number of ratings. However, I don't want to discount the possibility that this downward trend is, at least in part, caused by the show's audience decreasing (we will come back to this in the viewership section). We also note that the ~4000 vote point at the beginning is the first episode (after a cursory look on IMDb, it seems that show's first episodes often have ave a large number of votes).
+
 
 
 
