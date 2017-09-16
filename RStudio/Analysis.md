@@ -37,7 +37,7 @@ These two groups also rated the series the highest, giving it an average score o
 
 Now that we've seen who is voting for the series, let's look at how the number of votes changes throughout the series.
 
-![ep_votes_plot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/simp_votecount_sept6.png?raw=TRUE)
+![ep_votes_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_votes_plot.png?raw=TRUE)
 
 Seeing at the earlier seasons have been out for ~20 years more than the earlier episodes, it is only natural that more people have seen them, explaining the downward-trend in number of ratings. However, I don't want to discount the possibility that this downward trend is, at least in part, caused by the show's audience decreasing (we will come back to this in the viewership section). We also note that the ~4000 vote point at the beginning is the first episode (after a cursory look on IMDb, it seems that show's first episodes often have ave a large number of votes).
 
@@ -58,7 +58,16 @@ I've made you wait long enough so let's get straight into it. How has the IMDb s
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
-As I expected, the show exhibits a classic structure for long-running series: drastic early show growth, reaching a maximum, then a slow fall to below the first few seasons' scores. There is often much discussion about the "Golden Age" of The Simpsons, i.e. when it was at it's very best. Looking out our `season_avg` dataframe seasons 2-8 all have an average rating of above 8.0, season 1 & 9-16 are above 7.0 and seasons 17-28 are in the range 6.5-7.0.
+As I expected, the show exhibits a classic structure for long-running series: drastic early show growth, reaching a maximum, then a slow fall to below the first few seasons' scores. 
+
+
+There is often much discussion about the "Golden Age" of The Simpsons, i.e. when it was at it was very very good. Thankfully we already made our `season_avg` dataframe with the ratings aaveraged over season, so we can easily plot when 
+
+![avg_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/avg_rating_plot.png?raw=TRUE)
+
+We see that seasons 2-8 all have an average rating of above 8.0, season 1 & 9-16 are above 7.0 and seasons 17-28 are in the range 6.5-7.0. This fits with the general consensus that seasons 3-8 are where the show was in peak form, with the first two seasons still finding it's footing, and the later ones losing it's edge.
+
+
 
 
 
@@ -67,16 +76,17 @@ As I expected, the show exhibits a classic structure for long-running series: dr
 
 ## Plots
 
-### Episode Vote Number Plot
+### Episode Vote Numbers
 
 ```R
-ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=simp$season_num))
-labels<-ggtitle("Every Vote Counts",subtitle="IMDb Data Pulled Aug 31, 2017")+xlab("Episode Number")+ylab("Number of Votes For IMDb Score")+labs(col="Season")
+ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=simp$season_num))+ggtitle("Every Vote Counts",subtitle="The Simpsons")+xlab("Episode")+ylab("Number of Votes for IMDb Score")+labs(col="Season")
 ```
 
-### Episode Rate Plot
+### Episode Ratings
 ```R
-ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating,factor=simp$season_num))+geom_point(aes(col=season_num))+geom_smooth(se=FALSE,method=lm,col="grey45")
-labels<-xlab("Episode Number")+ylab("IMDb Rating")+ggtitle("Scoring The Simpsons",subtitle="IMDb Data Pulled Aug 31, 2017")+labs(col="Season")
+ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating,factor=simp$season_num))+geom_point(aes(col=season_num))+geom_smooth(se=FALSE,method=lm,col="grey45")+xlab("Episode")+ylab("IMDb Rating")+ggtitle("Scoring Springfield",subtitle="The Simpsons")+labs(col="Season")
 ```
-### 
+### Season Average Ratings
+```R
+avg_rating_plot<-ggplot(season_avg,aes(x=season_avg$season_num,y=season_avg$rating))+geom_col()+coord_cartesian(ylim=c(6.5,8.5))+geom_hline(yintercept=8,col="RED",linetype="dashed")+geom_hline(yintercept=7,col="RED",linetype="dashed")+scale_x_continuous(breaks=c(2,4,6,8,10,12,14,16,18,20,22,24,26,28))+xlab("Season")+ylab("Average IMDb Score")+ggtitle("The Golden Years",subtitle="The Simpsons")
+```
