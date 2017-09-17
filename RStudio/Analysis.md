@@ -69,7 +69,9 @@ simp[which.max(simp$rating),]
 ```
 Oddly enough we see that the most highly-rated episode is one whose premise is an hard-working outsider pointing out the absurdities in the show's premise. It serves as a nod of self-awarness to the audience as well as a reminder to it's obsessive fans that it's just a show. This episode would not make my top 10, but fans evidently like the show taking a break from wacky adventures and looking inwards.
 
-Other episodes with ratings above 9.0 include "You Only Move Twice" where Homer is unknowingly hired by a Bond Villain, "Cape Feare" a remake of "Cape Fear" where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, "Treehouse of Horrors V" one of the classic halloween episodes featuring 3 stories (homages to "The Shining", "A Sound of Thunder", and "Soylent Green"), "Who Shot Mr. Burns? Part One" a murder mystery where everyone in town is a suspect, and "The City of New York vs. Homer Simpson" where Homer fights parking tickets in the Big Apple. 
+Other episodes with ratings above 9.0 include "You Only Move Twice" where Homer is unknowingly hired by a Bond Villain, "Cape Feare" a remake of "Cape Fear" where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, "Treehouse of Horrors V" one of the classic halloween episodes featuring 3 stories (homages to "The Shining", "A Sound of Thunder", and "Soylent Green"), "Who Shot Mr. Burns? Part One" a murder mystery where everyone in town is a suspect, and "The City of New York vs. Homer Simpson" where Homer fights parking tickets in the Big Apple. Note that all these episodes are between seasons 5 through 9.
+
+On the other end of the spectrum, the lowest-rated episode is the Season 23 "Lisa Goes Gaga" with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other episodes in "All Singing All Dancing", a Season 9 musical episode, an episode where The Simpsons go to Jerusalem and Homer defiles various holy sites, a couple clip shows, and an episode where Moe's rag tells it's millennium-long life's story.
 
 
 
