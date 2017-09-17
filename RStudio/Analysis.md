@@ -58,7 +58,7 @@ I've made you wait long enough so let's get straight into it. How has the IMDb s
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plots.png?raw=TRUE)
 
-Early growth, a peak, then a drop to a plateau. The early episodes hover mostly between 7.5-9, while the later episodes sit in the 6.5-7.5 range. Therefore it does seem as if the quality has decreased throughout the years, to which many of the shows fans will say "DUH!". 
+Early growth, a peak, then a drop to a plateau. The early episodes hover mostly between 7.5-9, while the later episodes sit in the 6.5-7.5 range. Therefore it does seem as if the quality has decreased throughout the years, to which many of the shows fans will say "DUH!".
 
 With a quick Google search, one can find endless pages with "Top X Best Simpsons Episodes", BThe next question on my mind is another much-discussed topic amongst the shows loyal fanbase: The best (and worst) episode.
 
@@ -67,21 +67,18 @@ simp[which.max(simp$rating),]
     total_ep_num season_num ep_num imdb_num       ep_name rating num_votes
 176          176          8     23     8.23 Homer's Enemy    9.3      2693
 ```
+
 Oddly enough we see that the most highly-rated episode is one whose premise is an hard-working outsider pointing out the absurdities in the show's premise. It serves as a nod of self-awarness to the audience as well as a reminder to it's obsessive fans that it's just a show. This episode would not make my top 10, but fans evidently like the show taking a break from wacky adventures and looking inwards.
 
 Other episodes with ratings above 9.0 include "You Only Move Twice" where Homer is unknowingly hired by a Bond Villain, "Cape Feare" a remake of "Cape Fear" where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, "Treehouse of Horrors V" one of the classic halloween episodes featuring 3 stories (homages to "The Shining", "A Sound of Thunder", and "Soylent Green"), "Who Shot Mr. Burns? Part One" a murder mystery where everyone in town is a suspect, and "The City of New York vs. Homer Simpson" where Homer fights parking tickets in the Big Apple. Note that all these episodes are between seasons 5 through 9.
 
-On the other end of the spectrum, the lowest-rated episode is the Season 23 "Lisa Goes Gaga" with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other episodes in "All Singing All Dancing", a Season 9 musical episode, an episode where The Simpsons go to Jerusalem and Homer defiles various holy sites, a couple clip shows, and an episode where Moe's rag tells it's millennium-long life's story.
+On the other end of the spectrum, the lowest-rated episode is the Season 23 "Lisa Goes Gaga" with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other low-rated episode include "All Singing All Dancing" a musical episode, an episode where The Simpsons go to Jerusalem and Homer defiles various holy sites, a couple of clip show episodes and an episode where Moe's washrag tells it's life's story.
 
-
-
-There is often much discussion about the "Golden Age" of The Simpsons, i.e. when it was at it was it's best. Thankfully we already made our `season_avg` dataframe with the ratings averaged over season, so we can easily plot the average rating of each season.
+With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to study here is less a few crappy scripts, but more how the show has evolved. So let's jump into a much debated topic among Simpsons fans: "The Golden Age" i.e. when it was at it was it's best. Thankfully we already made our `season_avg` dataframe with the ratings averaged over season, so we can easily plot the average rating of each season.
 
 ![avg_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/avg_rating_plot.png?raw=TRUE)
 
-We see that seasons 2-8 all have an average rating of above 8.0, season 1 & 9-16 are above 7.0 and seasons 17-28 are in the range 6.5-7.0. This fits with the general consensus that seasons 3-8 are where the show was in peak form, with the first two seasons still finding it's footing, and the later ones losing it's edge.
-
-
+We see that seasons 2-8 all have an average rating of above 8.0, season 1 & 9-16 are above 7.0 and seasons 17-28 are in the range 6.5-7.0. This fits with the often-quoted idea that seasons 3-8 is where the show was in peak form, with the show still finding it's footing before this period, and the show losing it's edge after.
 
 
 
