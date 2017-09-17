@@ -56,7 +56,7 @@ for(i in 1:28){
 ## Scoring
 I've made you wait long enough so let's get straight into it. How has the IMDb score for episodes changed over the years?
 
-![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
+![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plots.png?raw=TRUE)
 
 As I expected, the show exhibits a classic structure for long-running series: drastic early show growth, reaching a maximum, then a slow fall to below the first few seasons' scores. 
 
@@ -84,7 +84,7 @@ ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=s
 
 ### Episode Ratings
 ```R
-ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating,factor=simp$season_num))+geom_point(aes(col=season_num))+geom_smooth(se=FALSE,method=lm,col="grey45")+xlab("Episode")+ylab("IMDb Rating")+ggtitle("Scoring Springfield",subtitle="The Simpsons")+labs(col="Season")
+ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating,factor=simp$season_num))+geom_point(aes(col=season_num))+geom_smooth(se=FALSE,method=lm,col="grey45")+xlab("Episode")+ylab("IMDb Rating")+ggtitle("Settling the Score",subtitle="The Simpsons")+labs(col="Season")
 ```
 ### Season Average Ratings
 ```R
