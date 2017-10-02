@@ -111,6 +111,6 @@ avg_rating_plot<-ggplot(season_avg,aes(x=season_avg$season_num,y=season_avg$rati
 ### golden age
 
 ```R
-gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_point()+geom_smooth(method='lm',se=FALSE)+ggtitle("Staying Golden",subtitle="The Simpsons 'Golden Era' Seasons")+xlab("Episode")+ylab("IMDb Rating")+geom_segment(aes(x=14,y=8.16,xend=178,yend=8.16),col="RED",linetype="dashed")+annotate("text",x=175,y=8.5,col="RED",label="Δy=0.07")+geom_segment(aes(x=14,y=8.37,xend=178,yend=8.37),col="RED",linetype="dashed")+geom_segment(aes(x=178,y=8.16,xend=178,yend=8.37),col="RED",arrow=arrow(ends="both",type="open",length=unit(0.24,"cm")))
+gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_point()+geom_smooth(method='lm',se=TRUE)+ggtitle("Staying Golden",subtitle="The Simpsons 'Golden Era'")+xlab("Episode")+ylab("IMDb Rating")+geom_segment(aes(x=14,y=8.16,xend=178,yend=8.16),col="RED",linetype="dashed")+annotate("text",x=175,y=8.5,col="RED",label="Δy=0.07")+geom_segment(aes(x=14,y=8.37,xend=178,yend=8.37),col="RED",linetype="dashed")+geom_segment(aes(x=178,y=8.16,xend=178,yend=8.37),col="RED",arrow=arrow(ends="both",type="open",length=unit(0.24,"cm")))+labs(col="Season")
 
 ```
