@@ -80,10 +80,11 @@ With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to 
 
 We see that seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 averages are above 7.0 and seasons 17-28 are in the range 6.5-7.0. This fits with the widely-accepted idea that seasons 3-8 is where the show was in peak form, with the show still finding it's footing before this period, and the show losing it's edge after.
 
-Let's take a closer look at this "Golden Age" of seasons 3-8 (I chose to disclude season 2 due to it's proximity to the cutoff). 
+Let's take a closer look at this "Golden Age" of seasons 2-8. 
 
+![gold_rate](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE)
 
-Our linear regression shows that the quality through these golden years is almost constant.
+Our linear regression shows that the quality through these golden years is nearly constant, within error.
 
 
 
