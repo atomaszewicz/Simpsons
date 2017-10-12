@@ -84,7 +84,7 @@ Let's take a closer look at this "Golden Age" of seasons 2-8.
 
 ![gold_rate2](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate2.png?raw=TRUE)
 
-The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point [gold_rate](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) ).
+The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a [linear regression](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) this difference shrinks to 7/100 of a point  ).
 
 
 
