@@ -82,14 +82,9 @@ We see that seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 ave
 
 Let's take a closer look at this "Golden Age" of seasons 2-8. 
 
-Linear            |  Rolling-Average
-:-------------------------:|:-------------------------:
-![gold_rate](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) | ![gold_rate2](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate2.png?raw=TRUE)
+![gold_rate2](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate2.png?raw=TRUE)
 
-
-
-Our linear regression shows that the quality through the Golden Age is nearly constant (an average change of less than a hundredth of a point per season), and our rolling-average regression shows that the show peaked near the end of season 6 and the beggining of season 7.
-
+The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point [gold_rate](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) ).
 
 
 
