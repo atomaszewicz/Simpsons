@@ -80,14 +80,30 @@ With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to 
 
 We see that seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 averages are above 7.0 and seasons 17-28 are in the range 6.5-7.0. This fits with the widely-accepted idea that seasons 2-8 is where the show was in peak form, with the show still finding it's footing in the first season, and the show losing it's edge after season 8. 
 
+## Golden Years
+
 Let's take a closer look at this "Golden Age" of seasons 2-8. 
+
+```R
+#Let's create a data frame to make this a little easier
+gold_age<-subset(simp,season_num<=8 & season_num>=2)
+```
 
 ![gold_rate2](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate2.png?raw=TRUE)
 
-The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a [linear regression](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) this difference shrinks to 7/100 of a point  ).
+The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a [linear regression](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) this difference shrinks to 7/100 of a point  ). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border.
+
+## Treehouse of Horror
+
+As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show, but are often extremelly difficult for both the writers and animators <sup> [1] </sup>
 
 
-
+```R
+#We create a new column in simp that highlights the "Treehouse of Horrors" episodes 
+#grepl(x,y) gives a boolean depending on whether it finds the string 'x' in position 'y'
+simp$spooky<-grepl("Treehouse",simp$ep_name)
+halloween<-subset(simp,spooky==TRUE)
+```
 
 ## Plots
 
@@ -112,3 +128,7 @@ avg_rating_plot<-ggplot(season_avg,aes(x=season_avg$season_num,y=season_avg$rati
 gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_point()+geom_smooth(method='lm',se=TRUE)+ggtitle("Staying Golden",subtitle="The Simpsons 'Golden Era'")+xlab("Episode")+ylab("IMDb Rating")+geom_segment(aes(x=14,y=8.16,xend=178,yend=8.16),col="RED",linetype="dashed")+annotate("text",x=175,y=8.5,col="RED",label="Δy=0.07")+geom_segment(aes(x=14,y=8.37,xend=178,yend=8.37),col="RED",linetype="dashed")+geom_segment(aes(x=178,y=8.16,xend=178,yend=8.37),col="RED",arrow=arrow(ends="both",type="open",length=unit(0.24,"cm")))+labs(col="Season")
 
 ```
+
+# Footnotes 
+
+<sup> [1] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
