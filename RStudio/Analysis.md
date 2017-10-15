@@ -101,6 +101,7 @@ As I'm writing this Halloween is only a couple weeks away, so I thought I'd take
 ```R
 #We create a new column in simp that highlights the "Treehouse of Horror" episodes 
 #grepl(x,y) gives a boolean depending on whether it finds the string 'x' in position 'y'
+#we loop through the episode names and add a new column for whether it is a "Treehouse ..." episode
 simp$spooky<-grepl("Treehouse",simp$ep_name)
 halloween<-subset(simp,spooky==TRUE)
 ```
@@ -115,7 +116,7 @@ for(i in 2:28){
      halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
 }
 ```
-Looking at these columns we see that an average a Treehouse of Horror episode is 0.3 points, or 4%, better than the average episode that season.
+We see that an average Treehouse of Horror episode is 0.31 points higher, 4% better, than the average episode that season. The largest difference is "Treehouse of Horror V" (which was one of the overall highest rated episodes) which is a whole 0.76 points above (10% better) the average season 6 episode. The lowest, and the only episode with a lower score than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
 
 ## Plots
 
