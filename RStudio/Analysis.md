@@ -116,7 +116,7 @@ for(i in 2:28){
      halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
 }
 ```
-We see that an average Treehouse of Horror episode is 0.31 points higher, 4% better, than the average episode that season. The largest difference is "Treehouse of Horror V" (which was one of the overall highest rated episodes) which is a whole 0.76 points above (10% better) the average season 6 episode. The lowest, and the only episode with a lower score than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
+We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average 0.31 points higher, 4% better, than the average episode that season. The largest difference is "Treehouse of Horror V" (which was one of the overall highest rated episodes) which is a whole 0.76 points above (10% better) the average season 6 episode. The lowest, and the only episode with a lower score than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
 
 ## Plots
 
