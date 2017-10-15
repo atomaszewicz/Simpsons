@@ -99,10 +99,21 @@ As I'm writing this Halloween is only a couple weeks away, so I thought I'd take
 
 
 ```R
-#We create a new column in simp that highlights the "Treehouse of Horrors" episodes 
+#We create a new column in simp that highlights the "Treehouse of Horror" episodes 
 #grepl(x,y) gives a boolean depending on whether it finds the string 'x' in position 'y'
 simp$spooky<-grepl("Treehouse",simp$ep_name)
 halloween<-subset(simp,spooky==TRUE)
+```
+
+With our dataframe ready, let's dive in with our first question: Are the Treehouse of Horror episodes better than normal episodes? To study this, let's start by normalizing by season, i.e. look at if the average episodes IMDb score is higher than the season's average score.
+
+```R
+#Let's look at both the ratio and difference
+#We will loop over season, but note that the halloween dataframe first element is in season 2
+for(i in 2:28){
+     halloween$rate_diff[i-1]<-halloween$rating[i-1]-season_avg$rating[i]
+     halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
+}
 ```
 
 ## Plots
