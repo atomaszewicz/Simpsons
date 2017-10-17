@@ -131,7 +131,7 @@ ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating))+geom_point(aes(col=seaso
 ```
 ### Season Average Ratings
 ```R
-avg_rating_plot<-ggplot(season_avg,aes(x=season_avg$season_num,y=season_avg$rating))+geom_col()+coord_cartesian(ylim=c(6.5,8.5))+geom_hline(yintercept=8,col="RED",linetype="dashed")+geom_hline(yintercept=7,col="RED",linetype="dashed")+scale_x_continuous(breaks=c(2,4,6,8,10,12,14,16,18,20,22,24,26,28))+xlab("Season")+ylab("Average IMDb Score")+ggtitle("The Golden Years",subtitle="The Simpsons")
+avg_rating_plot<-ggplot(season_avg,aes(x=season_avg$season_num,y=season_avg$rating))+geom_col()+coord_cartesian(ylim=c(6.5,8.5))+geom_hline(yintercept=8,col="RED",linetype="dashed")+geom_hline(yintercept=7,col="RED",linetype="dashed")+scale_x_continuous(breaks=c(2,4,6,8,10,12,14,16,18,20,22,24,26,28))+xlab("Season Number")+ylab("IMDb Rating")+ggtitle("The Golden Years",subtitle="The Simpsons, Season Averages")
 ```
 
 ### golden age
