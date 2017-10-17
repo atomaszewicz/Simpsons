@@ -122,12 +122,12 @@ We see that the Treehouse of Horror episodes do mimic the overall trend of the s
 ### Episode Vote Numbers
 
 ```R
-ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=simp$season_num))+ggtitle("Every Vote Counts",subtitle="The Simpsons")+xlab("Episode")+ylab("Number of Votes for IMDb Score")+labs(col="Season")
+ep_votes_plot<-ggplot(simp,aes(x=total_ep_num,y=num_votes))+geom_point(aes(col=simp$season_num))+ggtitle("Every Vote Counts",subtitle="The Simpsons, Votes for IMDb Rating")+xlab("Episode Number")+ylab("Number of Votes")+labs(col="Season")+geom_segment(aes(x=55,y=3945,xend=7,yend=4087),col="RED",arrow=arrow(type="open",length=unit(0.24,"cm")))+annotate("text",x=90,y=3930,label="First Episode",col="RED",size=3)
 ```
 
 ### Episode Ratings
 ```R
-ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating,factor=simp$season_num))+geom_point(aes(col=season_num))+geom_smooth(se=FALSE,method=lm,col="grey45")+xlab("Episode")+ylab("IMDb Rating")+ggtitle("Settling the Score",subtitle="The Simpsons")+labs(col="Season")
+ep_rate_plot<-ggplot(simp,aes(x=total_ep_num,y=rating))+geom_point(aes(col=season_num))+geom_smooth(se=TRUE,method=loess)+xlab("Episode Number")+ylab("IMDb Rating")+ggtitle("Settling the Score",subtitle="The Simpsons")+labs(col="Season")
 ```
 ### Season Average Ratings
 ```R
