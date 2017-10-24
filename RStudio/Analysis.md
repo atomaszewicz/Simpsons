@@ -41,11 +41,12 @@ Now that we've seen who is voting for the series, let's look at how the number o
 
 Seeing at the earlier seasons have been out for ~20 years more than the earlier episodes, it is only natural that more people have seen them, explaining the downward-trend in number of ratings. However, I would suspect that at least part of this downward trend is caused by the show's [audience decreasing](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements).
 
-Seven out of the ten most-reviewed episodes have ratings greater or equal to 9, with two of the exceptions being the series' first two episodes, and the third being the first "Treehouse of Horror" Halloween special. Further, all but four of the 15 episodes with a score of 9 and over received more than 2000 votes. These figures hint at a consensus among fans of the show on which are the best episodesT
+Seven out of the ten most-reviewed episodes have ratings greater or equal to 9, with two of the exceptions being the series' first two episodes, and the third being the first "Treehouse of Horror" Halloween special. Further, all but four of the 15 episodes with a score of 9 and over received more than 2000 votes. These figures hint at a consensus among fans on which are the best episodes.
 
 We can now look at how these voters rated the series' episodes.
 
 ## Scoring
+
 I've made you wait long enough so let's get straight into it. How has the IMDb score for episodes changed over the years?
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
@@ -54,19 +55,13 @@ Early growth, a peak, then a drop to a plateau. The early episodes hover mostly 
 
 With a quick Google search, one can find endless pages with "Top X Best/Worst Simpsons Episodes", so let's settle it the best way we know how, by the numbers.
 
-```R
-simp[which.max(simp$rating),]
-    total_ep_num season_num ep_num imdb_num       ep_name rating num_votes
-176          176          8     23     8.23 Homer's Enemy    9.3      2693
-```
+Oddly enough we see that the most highly-rated episode is the episode ["Homer's Enemey"](http://simpsons.wikia.com/wiki/Homer%27s_Enemy), the premise of which is an outsider pointing out the absurdities in the show's premise. It serves as a nod of self-awarness to the audience as well as a reminder to it's [obsessive fans](https://deadhomersociety.com/2010/08/02/animation-showcase-homer-goes-to college/) that it's just a show. This episode would not make my top 10, but fans evidently like the show taking a break from wacky adventures and looking inwards.
 
-Oddly enough we see that the most highly-rated episode is one whose premise is an hard-working outsider pointing out the absurdities in the show's premise. It serves as a nod of self-awarness to the audience as well as a reminder to it's obsessive fans that it's just a show. This episode would not make my top 10, but fans evidently like the show taking a break from wacky adventures and looking inwards.
-
-Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)), ["A Sound of Thunder"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder), and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect, and ["The City of New York vs. Homer Simpson"](http://simpsons.wikia.com/wiki/The_City_of_New_York_vs._Homer_Simpson) where Homer fights parking tickets in the Big Apple. Note that all these episodes are between seasons 5 through 9.
+Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of the 1962 film ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)), ["A Sound of Thunder"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder), and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect, and ["The City of New York vs. Homer Simpson"](http://simpsons.wikia.com/wiki/The_City_of_New_York_vs._Homer_Simpson) where Homer fights parking tickets in the Big Apple. We note that all these episodes are between seasons 5 through 9.
 
 On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). 
 
-With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to study here is less a few crappy scripts, but more how the show has evolved. So let's jump into a much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best.
+With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to study here is less a few boring scripts, but more how the show has evolved. So let's jump into a much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best.
 
 ## Golden Years
 
@@ -118,7 +113,7 @@ for(i in 2:28){
      halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
 }
 ```
-We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average 0.31 points higher, 4% better, than the average episode that season. The largest difference is "Treehouse of Horror V" (which was one of the overall highest rated episodes) which is a whole 0.76 points above (10% better) the average season 6 episode. The lowest, and the only episode with a lower score than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
+We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average 0.31 points higher (4% better) than the average episode that season. The largest difference is "Treehouse of Horror V" (one of the overall highest rated episodes) which is a whole 0.76 points above the average season 6 episode. The worst Treehouse of Horror episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
 
 ## Plots
 
