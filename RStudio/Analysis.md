@@ -86,9 +86,11 @@ Let's take a closer look at this "Golden Age" of seasons 2-8.
 gold_age<-subset(simp,season_num<=8 & season_num>=2)
 ```
 
-![gold_rate2](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate2.png?raw=TRUE)
+![gold_rate1](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate1.png?raw=TRUE)
 
-The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a [linear regression](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate.png?raw=TRUE) this difference shrinks to 7/100 of a point  ). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border.
+The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border. The reason for this is the nature of the 'rolling average'-based LOESS regression, where the neighboring points help determine the value of the regression for a given point. 
+
+
 
 ## Treehouse of Horror
 
@@ -135,7 +137,7 @@ avg_rating_plot<-ggplot(season_avg,aes(x=season_avg$season_num,y=season_avg$rati
 ### golden age
 
 ```R
-gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_point()+geom_smooth(method='lm',se=TRUE)+ggtitle("Staying Golden",subtitle="The Simpsons 'Golden Era'")+xlab("Episode")+ylab("IMDb Rating")+geom_segment(aes(x=14,y=8.16,xend=178,yend=8.16),col="RED",linetype="dashed")+annotate("text",x=175,y=8.5,col="RED",label="Δy=0.07")+geom_segment(aes(x=14,y=8.37,xend=178,yend=8.37),col="RED",linetype="dashed")+geom_segment(aes(x=178,y=8.16,xend=178,yend=8.37),col="RED",arrow=arrow(ends="both",type="open",length=unit(0.24,"cm")))+labs(col="Season")
+gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_point()+geom_smooth(method='loess',se=TRUE)+ggtitle("Staying Golden",subtitle="The Simpsons \"Golden Age\" Score Evolution")+xlab("Episode Number")+ylab("IMDb Rating")+geom_segment(aes(x=14,y=8.01,xend=178,yend=8.01),col="RED",linetype="dashed")+annotate("text",x=175,y=8.5,col="RED",label="Δy=0.37")+geom_segment(aes(x=14,y=8.38,xend=178,yend=8.38),col="RED",linetype="dashed")+geom_segment(aes(x=178,y=8.01,xend=178,yend=8.38),col="RED",arrow=arrow(ends="both",type="open",length=unit(0.24,"cm")))+labs(col="Season")
 ```
 
 ### Horror Bar
