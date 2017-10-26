@@ -88,13 +88,16 @@ gold_age<-subset(simp,season_num<=8 & season_num>=2)
 
 ![gold_rate1](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate1.png?raw=TRUE)
 
-The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border. The reason for this is the nature of the 'rolling average'-based LOESS regression, where the neighboring points help determine the value of the regression for a given point. 
+The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border. The reason for this is the nature of the 'rolling average'-based LOESS regression, where the neighburing points help determine the value of the regression for a given point. 
 
+Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore of a little over 1.
+
+So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. What about 
 
 
 ## Treehouse of Horror
 
-As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult for both the writers and animators <sup> [2] </sup>
+As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult and stressful for the writers and animators <sup> [2] </sup>
 
 
 ```R
@@ -115,7 +118,7 @@ for(i in 2:28){
      halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
 }
 ```
-We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average 0.31 points higher (4% better) than the average episode that season. The largest difference is "Treehouse of Horror V" (one of the overall highest rated episodes) which is a whole 0.76 points above the average season 6 episode. The worst Treehouse of Horror episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
+We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average of 7.6 points, which has a zscore of about 0.3. The episode with the largest difference from the series average is "Treehouse of Horror V" (one of the overall highest rated episodes) which is rated 9.1 and has a zscore of 2.3 for the series, but has a zscore of 1.2 for season 6. The worst Treehouse of Horror episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
 
 ## Plots
 
