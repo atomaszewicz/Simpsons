@@ -47,19 +47,19 @@ We can now look at how these voters rated the series' episodes.
 
 ## Scoring
 
-I've made you wait long enough so let's get straight into it. How has the IMDb score for episodes changed over the years?
+I've made you wait long enough so let's get straight into it. The average IMDb score is 7.4 with a standard deviation of 0.75 <sup> [1] </sup>. This is equivalent to a little over 3.5/5 stars, which is good, but not great. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
-Early growth, a peak, then a drop to a plateau. The early episodes hover mostly between 7.5-9, while the later episodes sit in the 6.5-7.5 range. Therefore it does seem as if the quality has decreased throughout the years, to which many of the shows fans will say "DUH!".
+Early growth, a peak, a drop, and a plateau. The early episodes hover mostly between 7.5-9, while the later episodes sit in the 6.5-7.5 range. So the IMDb ratings do reflect this 'decline' is real (this is the point where Simpsons fans DM me saying "DUH!"). There are a few distinct regions to this plot, but we will come back to this later. First we want to look at the highest highs, and the lowest lows.
 
-With a quick Google search, one can find endless pages with "Top X Best/Worst Simpsons Episodes", so let's settle it the best way we know how, by the numbers.
+With a quick Google search, one can find endless pages of "Top X Best/Worst Simpsons Episodes", so let's settle it the best way we know how, by the numbers.
 
 Oddly enough we see that the most highly-rated episode is the episode ["Homer's Enemey"](http://simpsons.wikia.com/wiki/Homer%27s_Enemy), the premise of which is an outsider pointing out the absurdities in the show's premise. It serves as a nod of self-awarness to the audience as well as a reminder to it's [obsessive fans](https://deadhomersociety.com/2010/08/02/animation-showcase-homer-goes-to college/) that it's just a show. This episode would not make my top 10, but fans evidently like the show taking a break from wacky adventures and looking inwards.
 
-Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of the 1962 film ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)), ["A Sound of Thunder"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder), and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect, and ["The City of New York vs. Homer Simpson"](http://simpsons.wikia.com/wiki/The_City_of_New_York_vs._Homer_Simpson) where Homer fights parking tickets in the Big Apple. We note that all these episodes are between seasons 5 through 9.
+Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of the 1962 film ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)), ["A Sound of Thunder"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder), and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect, and ["The City of New York vs. Homer Simpson"](http://simpsons.wikia.com/wiki/The_City_of_New_York_vs._Homer_Simpson) where Homer fights parking tickets in the Big Apple. We note that all these episodes are between seasons 5 through 9, and that they all have a zscore of over 2.
 
-On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). 
+On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). These episodes have a zscore in the range of -2 to -4. 
 
 With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to study here is less a few boring scripts, but more how the show has evolved. So let's jump into a much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best.
 
@@ -94,7 +94,7 @@ The regression shows that the IMDb score in the "Golden Age" doesn't change that
 
 ## Treehouse of Horror
 
-As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult for both the writers and animators <sup> [1] </sup>
+As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult for both the writers and animators <sup> [2] </sup>
 
 
 ```R
@@ -146,5 +146,25 @@ horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+
 ```
 
 # Footnotes 
+<sup> [1] </sup>
+Sample standard deviation calculated in the [normal way](https://wikimedia.org/api/rest_v1/media/math/render/svg/00eb0cde84f0a838a2de6db9f382866427aeb3bf)
 
-<sup> [1] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
+```R
+#First find the estimated mean
+rate_mean<-mean(simp$rating)
+
+#Then set the sum to zero and loop over the ratings for all the episodes
+sum=0
+for(i in 1:nrow(simp)){
+  sum<-sum+(simp$rating[i]-rate_mean)^2
+}
+
+#Now put the sum into the formula for sample standard deviatiog
+std_dev<-(sum/(nrow(simp)-1))^(1/2)
+
+#Now we can see the value
+std_dev
+[1] 0.7509323
+```
+
+<sup> [2] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
