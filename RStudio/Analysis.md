@@ -118,7 +118,7 @@ for(i in 2:28){
      halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
 }
 ```
-We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average of 7.6 points, which has a zscore of about 0.3. The episode with the largest difference from the series average is "Treehouse of Horror V" (one of the overall highest rated episodes) which is rated 9.1 and has a zscore of 2.3 for the series, but has a zscore of 1.2 for season 6. The worst Treehouse of Horror episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which sit 0.18 points below the season's average.
+We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average of 7.6 points, which has a zscore of about 0.3. The episode with the largest difference from the series average is "Treehouse of Horror V" (one of the overall highest rated episodes) which is rated 9.1 and has a zscore of 2.3 for the series, and a zscore of 1.2 for season 6. The worst Treehouse of Horror episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which has a zscore of -1 for the series -0.2 for that season.
 
 ## Plots
 
