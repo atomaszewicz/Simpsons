@@ -142,7 +142,7 @@ gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_poi
 
 ### Horror Bar
 ```R
-horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+geom_col()+geom_line(data=halloween,aes(x=season_num,y=rating,col="darkorange"))+coord_cartesian(ylim=c(6.5,9.2),xlim=c(2,28))+scale_x_continuous(breaks=c(5,10,15,20,25))+geom_point(data=halloween,size=1,aes(x=season_num,y=rating,col="darkorange"))
+horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+geom_col()+coord_cartesian(ylim=c(6.5,9.2),xlim=c(2,28))+scale_x_continuous(breaks=c(5,10,15,20,25))+geom_line(data=halloween,aes(x=season_num,y=rating),col="orange")+xlab("Season Number")+ylab("IMDb Rating")+ggtitle("Scared Jagged",subtitle="The Simpsons")+annotate("text",x=10.5,y=8.75,label="Treehouse of Horror",col="orange")+scale_color_discrete(guide=FALSE)+annotate("text",x=12,y=8.3,label="Season Average",col="grey30")
 ```
 
 # Footnotes 
