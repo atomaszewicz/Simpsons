@@ -61,11 +61,11 @@ Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://sim
 
 On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). These episodes have a zscore in the range of -2 to -4. 
 
-With 600+ episodes, you're bound to have a few stinkers, but what I'm trying to study here is less a few boring scripts, but more how the show has evolved. So let's jump into a much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best.
+We note that the zscores for the worst episodes are larger (in magnitude) than the best episodes. With 600+ episodes you're bound to have a few stinkers, but what I'm trying to study here is less a few crummy scripts, but more how the show has evolved. So let's start looking at the 'regions' i mentioned earlier. A much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best, so let's take a look at this first.
 
 ## Golden Years
 
- First, let's make a new dataframe with the season average scores, so we can analyzeif this so-called "Golden Age" is a reality, or a figment of nostalgia.
+Generally, the "Golden Age" is thought of as the seasons starting around season 2 and ending around season 10. First, let's make a new dataframe with all the season's average scores so we can analyze if this so-called "Golden Age" is a reality, or a figment of nostalgia.
 
 ```R
 #Create a new dataframe to store the average number of ratings for each season
