@@ -150,7 +150,7 @@ horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+
 
 # Footnotes 
 <sup> [1] </sup>
-Sample standard deviation calculated in the [normal way](https://wikimedia.org/api/rest_v1/media/math/render/svg/00eb0cde84f0a838a2de6db9f382866427aeb3bf)
+I will use this throughout for various subsets, so I will explicitly show the method once. Sample standard deviation calculated in the [normal way](https://wikimedia.org/api/rest_v1/media/math/render/svg/00eb0cde84f0a838a2de6db9f382866427aeb3bf)
 
 ```R
 #First find the estimated mean
