@@ -169,5 +169,6 @@ std_dev<-(sum/(nrow(simp)-1))^(1/2)
 std_dev
 [1] 0.7509323
 ```
+Now you can calculate the z-score for various points.
 
 <sup> [2] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
