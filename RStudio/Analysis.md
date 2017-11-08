@@ -1,8 +1,8 @@
 # Analyzing The Simpson's Quality
 
-We have already cleaned the raw IMDb data in an excel spreadsheet and we will bring it into RStudio for analysis.
+We have already cleaned the raw IMDb data in an excel spreadsheet, so we bring it into RStudio for analysis.
 
-Begin by loading our favorite packages.
+First we load our favorite packages.
 
 ```R
 install.packages("xlsx") 
@@ -13,7 +13,7 @@ require("ggplot2")
 require("reshape2")
 ```
 
-Now we load it isn't a table in R
+Now we load the xlsx into R as a dataframe.
 
 ```R
 simp<-read.xlsx("simpsons.xlsx",2)
@@ -25,21 +25,19 @@ simp$season_num<-factor(simp$season_num)
 ```
 
 
-The first thing that we wonder is, well, how have the ratings evolved over time? Have they gone up or down i.e. do people percieve the show as getting better or worse? That isn't the whole story however, as *who* is voting is a very important aspect. 
+The first thing that we (read as: I) wonder is how have the ratings evolved over time? Have they gone up or down i.e. do people percieve the show as getting better or worse? Before we anwser this we want to look at who and how often are people voting on these episodes.
 
 ## Voting
 
 To get an idea of who is voting for the IMDb scores, we will use the breakdow of the voting demographics for their aggregated TV score by series and by episodes, found [here](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
 
-The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Overall the series recieved a score of 8.8/10, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact, in every age demographic, males rate the series higher. Males voted over four and half times more than females, and each age demographic is largely dominated by men. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline. We will come back to this later). The two groups that rated it the most are the male portion of the 18-29 and 30-45 year old demographics. Combined they make up almost two thirds of the votes, with the 18-29 males voting about 15% more than the 30-45 males.
+The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Overall the series recieved a score of 8.8/10, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
 
-These two groups also rated the series the highest, giving it an average score of 8.9/10. It is a bit suprising that the male portion of the "core" 18-29 demo has the same net opinion as the less-important male 30-44 demo, but when you remember that The Simpsons has been on air for 28 years, and that the latter group thus up alongside the show, it makes more sense. In fact these two groups voted a similar amount, with the 18-29 having about 15% more votes. The lowest raiting is from the female 45+ demographic, who give the show a 7.9/10, which is a suprisingly high rating since much of the show's appeal is subverting the norms of the shows that the 45+ demographic grew up with.
-
-Now that we've seen who is voting for the series, let's look at how the number of votes changes throughout the series.
+Now that we've seen who is rating the series, let's look at how the number of votes changes throughout the series.
 
 ![ep_votes_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_votes_plot2.png?raw=TRUE)
 
-Seeing at the earlier seasons have been out for ~20 years more than the earlier episodes, it is only natural that more people have seen them, explaining the downward-trend in number of ratings. However, I would suspect that at least part of this downward trend is caused by the show's [audience decreasing](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements).
+The downward trend is probably correlated with the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but also likely a factor of the shows long run time meaning some episodes have been on reruns for 20 years (and thus have been seen significantly more times).
 
 Seven out of the ten most-reviewed episodes have ratings greater or equal to 9, with two of the exceptions being the series' first two episodes, and the third being the first "Treehouse of Horror" Halloween special. Further, all but four of the 15 episodes with a score of 9 and over received more than 2000 votes. These figures hint at a consensus among fans on which are the best episodes.
 
