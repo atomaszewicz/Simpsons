@@ -29,41 +29,41 @@ The first thing that we (read as: I) wonder is how have the ratings evolved over
 
 ## Voting
 
-To get an idea of who is voting for the IMDb scores, we will use the breakdow of the voting demographics for their aggregated TV score by series and by episodes, found [here](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
+To get an idea of who is voting for the IMDb scores, we will use the breakdow of the voting demographics for their aggregated TV score by series, found [here](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
 
-The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Based on rating the series as a whole, it receives an 8.8/10 <sup>[1]</sup>, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
+The data <sup>[1]</sup> sheds some light on what groups are voting the most, and how much they like the series. Based on rating the series as a whole, it receives an 8.8/10 <sup>[1]</sup>, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
 
 Now that we've seen who is rating the series, let's look at how the number of votes changes throughout the series.
 
 ![ep_votes_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_votes_plot2.png?raw=TRUE)
 
-The downward trend is probably correlated with the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but also likely a factor of the shows 20+ year run meaning the early episodes have been replayed a lot (and thus have been seen significantly more times).
+The downward trend is probably correlated with the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but also likely a factor of the shows 20+ year run meaning the early episodes have been replayed a lot and thus have been seen significantly more times.
 
 Of the ten most-reviewed episodes, seven have a score greater or equal to 9, with two of the exceptions being the series' first two episodes and the third being the first "Treehouse of Horror" Halloween special. Further, all but four of the 15 episodes with a score of 9 and over received more than 2000 votes. These figures hint at a consensus among fans on which are the best episodes.
 
-We can now look at how these voters rated the series' episodes.
+Well, where do these episodes lie along the 28 year run of the show?
 
 ## Scoring
 
-The average IMDb episode score is 7.4 *this score differnet from above \, look at total votes* with a standard deviation of 0.75 <sup> [2] </sup>. This is equivalent to a little over 3.5/5 stars, which is good, but not great. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
+The average episode score is 7.4 with a standard deviation of 0.75 <sup> [2] </sup>. We note that this is significantly lower than the 8.8 score for the series overall. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
-Early growth, a peak, a drop, and a plateau. The early episodes hover mostly between 7.5-9, while the later episodes sit in the 6.5-7.5 range. So the IMDb ratings do reflect this 'decline' is real (this is the point where Simpsons fans DM me saying "DUH!"). There are a few distinct regions to this plot, but we will come back to this later. First we want to look at the highest highs, and the lowest lows.
+Early growth, a peak, a drop, and a plateau. The early episodes hover mostly between 7.5-9, while the later episodes sit in the 6.5-7.5 range. So the IMDb ratings do reflect this 'decline' is real (this is the point where Simpsons fans DM me saying "DUH!"). There are a few distinct regions to this plot, most importantly the peak aka the "Golden Age" (we will come back to this later). First we want to look at the highest highs, and the lowest lows.
 
 With a quick Google search, one can find endless pages of "Top X Best/Worst Simpsons Episodes", so let's settle it the best way we know how, by the numbers.
 
 Oddly enough we see that the most highly-rated episode is the episode ["Homer's Enemey"](http://simpsons.wikia.com/wiki/Homer%27s_Enemy), the premise of which is an outsider pointing out the absurdities in the show's premise. It serves as a nod of self-awarness to the audience as well as a reminder to it's [obsessive fans](https://deadhomersociety.com/2010/08/02/animation-showcase-homer-goes-to college/) that it's just a show. This episode would not make my top 10, but fans evidently like the show taking a break from wacky adventures and looking inwards.
 
-Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of the 1962 film ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)), ["A Sound of Thunder"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder), and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect, and ["The City of New York vs. Homer Simpson"](http://simpsons.wikia.com/wiki/The_City_of_New_York_vs._Homer_Simpson) where Homer fights parking tickets in the Big Apple. We note that all these episodes are between seasons 5 through 9, and that they all have a zscore of over 2.
+Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of the 1962 film ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)), ["A Sound of Thunder"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder), and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), and ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect. We note that all these episodes are between seasons 5 through 9, and that they all have a zscore of over 2 (with respect to the series average).
 
-On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10 which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). These episodes have a zscore in the range of -2 to -4. 
+On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10, which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). These episodes have a zscore in the range of -2 to -4 (with respect to the seires average). 
 
-We note that the zscores for the worst episodes are larger (in magnitude) than the best episodes. With 600+ episodes you're bound to have a few stinkers, but what I'm trying to study here is less a few crummy scripts, but more how the show has evolved. So let's start looking at the 'regions' i mentioned earlier. A much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best, so let's take a look at this first.
+We note that the zscores for the worst episodes are larger (in magnitude) than the best episodes. With 600+ episodes you're bound to have a few stinkers; what I'm trying to study here is less a few crummy scripts, but more how the show has evolved. So let's start looking at the 'regions' i mentioned earlier. A much debated topic among Simpsons fans: "Golden Age" i.e. when it was at it was it's best, so let's take a look at this first.
 
 ## Golden Years
 
-Generally, the "Golden Age" is thought of as the seasons starting around season 2 and ending around season 10. First, let's make a new dataframe with all the season's average scores so we can analyze if this so-called "Golden Age" is a reality, or a figment of nostalgia.
+The "Golden Age", or the period of time when the show was at it's peak, is generally thought of as the period betwen seasons 2 and 10 (although the exact start and finish is debated to no end). First, let's make a new dataframe with all the season's average scores so we can analyze if this so-called "Golden Age" is a reality, or a figment of nostalgia.
 
 ```R
 #Create a new dataframe to store the average number of ratings for each season
@@ -88,14 +88,15 @@ gold_age<-subset(simp,season_num<=8 & season_num>=2)
 
 The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border. The reason for this is the nature of the 'rolling average'-based LOESS regression, where the neighburing points help determine the value of the regression for a given point. 
 
-Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore of a little over 1.
+Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore of a little over 1. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
 
-So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. What about 
-
+On the topic of higher-than-average quality, The Simpson's annual "Treehouse of Horror" episodes are some of my personal favorite episodes (remember that Treehouse of Horror V is one of the highest-rated episodes), and with Halloween only a couple weeks away, what better time to find out if these episodes are truly above average, or I'm clouded by the fun of the spooky atmosphere.
 
 ## Treehouse of Horror
 
-As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult and stressful for the writers and animators <sup> [3] </sup>
+For the last 27 years (the first installment premiered in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show but they end up being quite difficult and stressful for the staff <sup> [3] </sup>. 
+
+To begin we create a Treehouse of Horror dataframe 
 
 
 ```R
@@ -103,10 +104,11 @@ As I'm writing this Halloween is only a couple weeks away, so I thought I'd take
 #grepl(x,y) gives a boolean depending on whether it finds the string 'x' in position 'y'
 #we loop through the episode names and add a new column for whether it is a "Treehouse ..." episode
 simp$spooky<-grepl("Treehouse",simp$ep_name)
+#Then we create a new dataframe with only the Treehouse Episodes
 halloween<-subset(simp,spooky==TRUE)
 ```
 
-With our dataframe ready, let's dive in with our first question: Are the Treehouse of Horror episodes better than normal episodes? To study this, let's start by normalizing by season, i.e. we will see if the average episodes IMDb score is higher than that season's average score.
+With our dataframe ready, let's dive in with our first question: Are the Treehouse of Horror better than normal episodes? To study this, let's start by normalizing by season, i.e. we will see if the average episodes IMDb score is higher than that season's average score.
 
 ```R
 #Let's look at both the ratio and difference
@@ -147,6 +149,11 @@ horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+
 ```
 
 # Footnotes 
+
+<sup> [1] </sup>
+i pulled on September 6, 2017, and it has certainly changed since.
+
+
 
 <sup> [1] </sup>
 This is IMDb's weighted average, the arithmetic mean is 8.7.
