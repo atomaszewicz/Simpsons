@@ -31,21 +31,21 @@ The first thing that we (read as: I) wonder is how have the ratings evolved over
 
 To get an idea of who is voting for the IMDb scores, we will use the breakdow of the voting demographics for their aggregated TV score by series and by episodes, found [here](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
 
-The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Overall the series recieved a score of 8.8/10, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
+The data (pulled September 6, 2017) sheds some light on what groups are voting the most, and how much they like the series. Based on rating the series as a whole, it receives an 8.8/10 <sup>[1]</sup>, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
 
 Now that we've seen who is rating the series, let's look at how the number of votes changes throughout the series.
 
 ![ep_votes_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_votes_plot2.png?raw=TRUE)
 
-The downward trend is probably correlated with the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but also likely a factor of the shows long run time meaning some episodes have been on reruns for 20 years (and thus have been seen significantly more times).
+The downward trend is probably correlated with the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but also likely a factor of the shows 20+ year run meaning the early episodes have been replayed a lot (and thus have been seen significantly more times).
 
-Seven out of the ten most-reviewed episodes have ratings greater or equal to 9, with two of the exceptions being the series' first two episodes, and the third being the first "Treehouse of Horror" Halloween special. Further, all but four of the 15 episodes with a score of 9 and over received more than 2000 votes. These figures hint at a consensus among fans on which are the best episodes.
+Of the ten most-reviewed episodes, seven have a score greater or equal to 9, with two of the exceptions being the series' first two episodes and the third being the first "Treehouse of Horror" Halloween special. Further, all but four of the 15 episodes with a score of 9 and over received more than 2000 votes. These figures hint at a consensus among fans on which are the best episodes.
 
 We can now look at how these voters rated the series' episodes.
 
 ## Scoring
 
-I've made you wait long enough so let's get straight into it. The average IMDb score is 7.4 with a standard deviation of 0.75 <sup> [1] </sup>. This is equivalent to a little over 3.5/5 stars, which is good, but not great. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
+The average IMDb episode score is 7.4 *this score differnet from above \, look at total votes* with a standard deviation of 0.75 <sup> [2] </sup>. This is equivalent to a little over 3.5/5 stars, which is good, but not great. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
@@ -95,7 +95,7 @@ So it seems the "Golden Age" is real, the show did have 6 seasons where the epis
 
 ## Treehouse of Horror
 
-As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult and stressful for the writers and animators <sup> [2] </sup>
+As I'm writing this Halloween is only a couple weeks away, so I thought I'd take a look at The Simpsons "Treehosue of Horror" Halloween specials. For the last 27 years (this tradition was introduced in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various  films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show and be extra gruesome, but are often extremelly difficult and stressful for the writers and animators <sup> [3] </sup>
 
 
 ```R
@@ -147,7 +147,11 @@ horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+
 ```
 
 # Footnotes 
+
 <sup> [1] </sup>
+This is IMDb's weighted average, the arithmetic mean is 8.7.
+
+<sup> [2] </sup>
 I will use this throughout for various subsets, so I will explicitly show the method once. Sample standard deviation calculated in the [normal way](https://wikimedia.org/api/rest_v1/media/math/render/svg/00eb0cde84f0a838a2de6db9f382866427aeb3bf)
 
 ```R
@@ -169,4 +173,4 @@ std_dev
 ```
 Now you can calculate the z-score for various points.
 
-<sup> [2] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
+<sup> [3] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
