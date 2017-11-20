@@ -25,7 +25,7 @@ simp$season_num<-factor(simp$season_num)
 ```
 
 
-The first thing that we (read as: I) wonder is how have the ratings evolved over time? Have they gone up or down i.e. do people percieve the show as getting better or worse? Before we anwser this we want to look at who and how often are people voting on these episodes.
+The first thing that we wonder is how have the ratings evolved over time? Have they gone up or down i.e. do people percieve the show as getting better or worse? Before we anwser this we want to look at who and how often are people voting on these episodes.
 
 ## Voting
 
@@ -43,7 +43,7 @@ Of the ten most-reviewed episodes, seven have a score greater or equal to 9, wit
 
 ## Scoring
 
-The average episode score is 7.4 with a standard deviation of 0.75 <sup> [2] </sup>. We note that this is significantly lower than the 8.8 score for the series overall. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
+The average episode score is 7.4 with a standard deviation of 0.75 <sup> [2] </sup>. We note that this is significantly lower than the 8.8, which is from IMDb users rating the series overall. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
@@ -55,13 +55,13 @@ Oddly enough we see that the most highly-rated episode is the episode ["Homer's 
 
 Other episodes with ratings above 9.0 include ["You Only Move Twice"](http://simpsons.wikia.com/wiki/You_Only_Move_Twice) where Homer is unknowingly hired by a Bond Villain, ["Cape Feare"](http://simpsons.wikia.com/wiki/Cape_Feare) a remake of the 1962 film ["Cape Fear"](https://en.wikipedia.org/wiki/Cape_Fear_(1962_film)) where The Simpsons enter a witness protection program after Bart receives death threats from his nemsis Sideshow Bob, ["Treehouse of Horror V"](http://simpsons.wikia.com/wiki/Treehouse_of_Horror_V) one of the classic Halloween episodes (which features homages to ["The Shining"](https://en.wikipedia.org/wiki/The_Shining_(film)) and ["Soylent Green"](https://en.wikipedia.org/wiki/A_Sound_of_Thunder)), and ["Who Shot Mr. Burns? Part One"](http://simpsons.wikia.com/wiki/Who_Shot_Mr._Burns%3F_(Part_One)) a murder mystery where everyone in town is a suspect. We note that all these episodes are between seasons 5 through 9, and that they all have a zscore of over 2 (with respect to the series average).
 
-On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10, which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). These episodes have a zscore in the range of -2 to -4 (with respect to the seires average). 
+On the other end of the spectrum, the lowest-rated episode is the Season 23 ["Lisa Goes Gaga"](http://simpsons.wikia.com/wiki/Lisa_Goes_Gaga) with a 4.3/10, which features Lady Gaga helping Lisa with her self esteem. Other low-rated episodes include ["All Singing All Dancing"](http://simpsons.wikia.com/wiki/All_Singing,_All_Dancing) a musical episode, an episode where [The Simpsons go to Jerusalem](http://simpsons.wikia.com/wiki/The_Greatest_Story_Ever_D%27ohed) and Homer defiles various holy sites, and an episode where [Moe's washrag tells it's life's story](http://simpsons.wikia.com/wiki/Moe_Goes_from_Rags_to_Riches). These episodes have a zscore in the range of -2 to -4 (with respect to the series average & variance). 
 
-We note that the zscores for the worst episodes are larger (in magnitude) than the best episodes. With 600+ episodes you're bound to have a few stinkers; what I'm trying to study here is less a few crummy scripts, but more how the show has evolved. Let's start by looking at the show's peak, aka the "Golden Age".
+We note that the zscores for the worst episodes are larger (in magnitude) than the best episodes. With 600+ episodes you're bound to have a few stinkers; what I'm trying to study here is less a few crummy scripts, but more how the show has evolved. A good place to start is at the show's peak, often refered to as the "Golden Age".
 
 ## Golden Years
 
-The "Golden Age", or the period of time when the show was at it's peak, is generally thought of as the period betwen seasons 2 and 10, though this is debated to no end amongst fans. First, let's make a new dataframe with all the season's average scores so we can analyze if this so-called "Golden Age" is a reality, or a figment of nostalgia.
+The "Golden Age" is generally thought of as the period betwen seasons 2 and 10, though this is debated to no end amongst fans. First, let's make a new dataframe with all the season's average scores so we can analyze if this so-called "Golden Age" is a reality, or a figment of nostalgia.
 
 ```R
 #Create a new dataframe to store the average number of ratings for each season
@@ -86,15 +86,15 @@ gold_age<-subset(simp,season_num<=8 & season_num>=2)
 
 The regression shows that the IMDb score in the "Golden Age" doesn't change that much: the difference between the max and min of the regression are less than 2/5 of a point apart (with a linear regression this difference shrinks to 7/100 of a point). It is worth noting that despite the previous plot showing us that season 5 had the highest average score, the regression peaks at the season 6-season 7 border. The reason for this is the nature of the 'rolling average'-based LOESS regression, where the neighburing points help determine the value of the regression for a given point. 
 
-Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore of a little over 1. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
+Lastly, the average "Golden Age" episode rating is 8.2. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
 
 On the topic of higher-than-average quality, The Simpson's annual "Treehouse of Horror" episodes are some of my personal favorite episodes (remember that Treehouse of Horror V is one of the highest-rated episodes), and with Halloween only a couple weeks away, what better time to find out if these episodes are truly above average, or I'm clouded by the fun of the spooky atmosphere.
 
 ## Treehouse of Horror
 
-For the last 27 years (the first installment premiered in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various films, television shows, literature, plays, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show but they end up being quite difficult and stressful for the staff <sup> [3] </sup>. 
+For the last 27 years (the first installment premiered in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various films, television shows, literature, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show but they end up being quite difficult and stressful for the staff <sup> [3] </sup>. 
 
-To begin we create a Treehouse of Horror dataframe 
+To begin we create a data frame with only these Treehouse episodes. Since the quality fluctuates throughout the year we normalize the scores by seasons i.e. we will see if the average Treehouse's IMDb score is higher than that season's average score.
 
 
 ```R
@@ -104,11 +104,7 @@ To begin we create a Treehouse of Horror dataframe
 simp$spooky<-grepl("Treehouse",simp$ep_name)
 #Then we create a new dataframe with only the Treehouse Episodes
 halloween<-subset(simp,spooky==TRUE)
-```
 
-With our dataframe ready, let's dive in with our first question: Are the Treehouse of Horror better than normal episodes? To study this, let's start by normalizing by season, i.e. we will see if the average episodes IMDb score is higher than that season's average score.
-
-```R
 #Let's look at both the ratio and difference
 #We will loop over season, but note that the halloween dataframe first element is in season 2
 for(i in 2:28){
@@ -116,7 +112,14 @@ for(i in 2:28){
      halloween$rate_ratio[i-1]<-halloween$rating[i-1]/season_avg$rating[i]
 }
 ```
-We see that the Treehouse of Horror episodes do mimic the overall trend of the show, and score an average of 7.6 points, which has a zscore of about 0.3. The episode with the largest difference from the series average is "Treehouse of Horror V" (one of the overall highest rated episodes) which is rated 9.1 and has a zscore of 2.3 for the series, and a zscore of 1.2 for season 6. The worst Treehouse of Horror episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which has a zscore of -1 for the series -0.2 for that season.
+
+The ToH episodes score slightly above average, with a mean of 7.6 compared with the series 7.4, and the "Golden Age" ToH episodes average 8.5, compared with the 6-season average of 8.2. The season-normalized scores tell us that the Halloween specials are 4% better than an average episode that season. 
+
+As we saw earlier is "Treehouse of Horror V", which is rated 9.1, is one of the series highest scoring episodes, but the worst ToH episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which scores 6.6, with a zscore of -1 for the series, and -0.2 for that season. 
+
+So the Treehouse Episodes seem to be a bit, but not significantly, above average. This makes sense in hindsight, as they are still a product of the season's staff, and likely don't get *that* much more attention than other episodes. 
+
+
 
 ## Plots
 
