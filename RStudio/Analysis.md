@@ -92,7 +92,7 @@ On the topic of higher-than-average quality, The Simpson's annual "Treehouse of 
 
 ## Treehouse of Horror
 
-For the last 27 years (the first installment premiered in Season 2) The Simpsons has aired spooky episodes featuring 3 segments paying homage to, or parodying, various films, television shows, literature, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) of the show but they end up being quite difficult and stressful for the staff <sup> [3] </sup>. 
+For the past 27 Halloweens The Simpsons has aired a triplet of shorts that pay homage to, or parody films, television shows, literature, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the show's [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) and imagine the characters in new ways, but with all the fantastic animation, keeping it inline with the show's atmosphere, and keeping the gore to censor-satisfying levels they often end up being quite difficult and stressful for the staff<sup> [3] </sup>. However, these are some of the most fun episodes, and the insane skills of the animators and writers are showcased as they raise the bar year after year.
 
 To begin we create a data frame with only these Treehouse episodes. Since the quality fluctuates throughout the year we normalize the scores by seasons i.e. we will see if the average Treehouse's IMDb score is higher than that season's average score.
 
