@@ -1,16 +1,12 @@
 # Analyzing The Simpson's Quality
 
-We have already cleaned the raw IMDb data in an excel spreadsheet, so we bring it into RStudio for analysis.
-
-First we load our favorite packages.
+Having cleaned the raw IMDb data in Excel, we can bring it into RStudio for analysis, but first we load a couple packages.
 
 ```R
 install.packages("xlsx") 
 install.packages("ggplot2")
-install.packages("reshape2")
 require("xlsx")
 require("ggplot2")
-require("reshape2")
 ```
 
 Now we load the xlsx into R as a dataframe.
@@ -20,16 +16,18 @@ simp<-read.xlsx("simpsons.xlsx",2)
 ```
 
 We quickly solidify the order of the seasons as R sometimes factors them weirdly.
+
 ```R
 simp$season_num<-factor(simp$season_num)
 ```
 
+The first thing that we wonder is how the IMDb ratings have evolved over the show's 28 seasons? However, since the ratings on IMDb are submitted by users, and knowing what I know about the show's [declining audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements) we must study how the we will look at how the voting for these scores has evolved. 
 
-The first thing that we wonder is how have the ratings evolved over time? Have they gone up or down i.e. do people percieve the show as getting better or worse? Before we anwser this we want to look at who and how often are people voting on these episodes.
+I want to look at But before we anwser this we want to look at who and how often are people voting on these episodes.
 
 ## Voting
 
-To get an idea of who is voting for the IMDb scores, we will use the breakdow of the voting demographics for their aggregated TV score by series, found [here](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
+To get an idea of who is voting for the IMDb scores, we will use the breakdown of the voting demographics [provided by IMDb](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
 
 The data <sup>[1]</sup> sheds some light on what groups are voting the most, and how much they like the series. Based on rating the series as a whole, it receives an 8.8/10 <sup>[1]</sup>, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
 
