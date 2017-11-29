@@ -21,15 +21,13 @@ We quickly solidify the order of the seasons as R sometimes factors them weirdly
 simp$season_num<-factor(simp$season_num)
 ```
 
-The first thing that we wonder is how the IMDb ratings have evolved over the show's 28 seasons? However, since the ratings on IMDb are submitted by users, and knowing what I know about the show's [declining audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements) we must study how the we will look at how the voting for these scores has evolved. 
-
-I want to look at But before we anwser this we want to look at who and how often are people voting on these episodes.
+The first thing that we wonder is how the IMDb ratings have evolved over the show's 28 seasons? However, since the ratings on IMDb are submitted by users, and knowing about the show's [declining audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), it is important to look at how the voting for these scores has evolved. 
 
 ## Voting
 
-To get an idea of who is voting for the IMDb scores, we will use the breakdown of the voting demographics [provided by IMDb](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_). I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
+To get an idea of who is voting for the IMDb scores, we will use the breakdown of the voting demographics [provided by IMDb](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_) <sup>[1]</sup>. I will start by looking at the voting by demographic on the series overall, and if I have time I will come back and analyze the changes in demographic by episode.
 
-The data <sup>[1]</sup> sheds some light on what groups are voting the most, and how much they like the series. Based on rating the series as a whole, it receives an 8.8/10 <sup>[1]</sup>, which makes it the 54th highest rated show in IMDb. Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
+Males make up over 80% of the ratings, and they rate it an average of 8.8/10, a fifth of a point higher than females. In fact in every age demographic males rate the series higher. Further, males voted over four times more than females. The smallest demographic is the under 18's, who make up less than one percent of the score (this is the group that discovered the show after it's decline). The two groups that voted the most are the male portions of the 18-29 and 30-45 year old demographics, and combined they make up almost two thirds of the votes.
 
 Now that we've seen who is rating the series, let's visualize how the votes per episode changed throughout the series.
 
@@ -41,7 +39,7 @@ Of the ten most-reviewed episodes, seven have a score greater or equal to 9, wit
 
 ## Scoring
 
-The average episode score is 7.4 with a standard deviation of 0.75 <sup> [2] </sup>. We note that this is significantly lower than the 8.8, which is from IMDb users rating the series overall. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has declined from it's prime. Let's see if the IMDb scores reflect this. 
+The average episode score is 7.4 with a standard deviation of 0.75 <sup> [3] </sup>. Rating the series as a whole it receives an 8.8/10 <sup>[1]</sup> <sup>[2]</sup> which makes it the 54th highest rated show in IMDb. However the mean isn't the whole story as most Simpsons fans will tell you, the show's quality has ebbed and flowed over the years. Let's see if the IMDb scores reflect this. 
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
@@ -90,7 +88,7 @@ On the topic of higher-than-average quality, The Simpson's annual "Treehouse of 
 
 ## Treehouse of Horror
 
-For the past 27 Halloweens The Simpsons has aired a triplet of shorts that pay homage to, or parody films, television shows, literature, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the show's [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) and imagine the characters in new ways, but with all the fantastic animation, keeping it inline with the show's atmosphere, and keeping the gore to censor-satisfying levels they often end up being quite difficult and stressful for the staff<sup> [3] </sup>. However, these are some of the most fun episodes, and the insane skills of the animators and writers are showcased as they raise the bar year after year.
+For the past 27 Halloweens The Simpsons has aired a triplet of shorts that pay homage to, or parody films, television shows, literature, EC Comics, and of course, episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the show's [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) and imagine the characters in new ways, but with all the fantastic animation, keeping it inline with the show's atmosphere, and keeping the gore to censor-satisfying levels they often end up being quite difficult and stressful for the staff<sup> [4] </sup>. However, these are some of the most fun episodes, and the insane skills of the animators and writers are showcased as they raise the bar year after year.
 
 To begin we create a data frame with only these Treehouse episodes. Since the quality fluctuates throughout the year we normalize the scores by seasons i.e. we will see if the average Treehouse's IMDb score is higher than that season's average score.
 
@@ -154,10 +152,10 @@ i pulled on September 6, 2017, and it has certainly changed since.
 
 
 
-<sup> [1] </sup>
+<sup> [2] </sup>
 This is IMDb's weighted average, the arithmetic mean is 8.7.
 
-<sup> [2] </sup>
+<sup> [3] </sup>
 I will use this throughout for various subsets, so I will explicitly show the method once. Sample standard deviation calculated in the [normal way](https://wikimedia.org/api/rest_v1/media/math/render/svg/00eb0cde84f0a838a2de6db9f382866427aeb3bf)
 
 ```R
@@ -179,4 +177,4 @@ std_dev
 ```
 Now you can calculate the z-score for various points.
 
-<sup> [3] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
+<sup> [4] </sup>: Reiss, Mike (2002). The Simpsons season 2 DVD commentary for the episode "Treehouse of Horror" (DVD). 20th Century Fox.
