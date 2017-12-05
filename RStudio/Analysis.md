@@ -115,7 +115,7 @@ As we saw earlier is "Treehouse of Horror V", which is rated 9.1, is one of the 
 
 ![treehouse_boxplot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/treehouse_boxplot.png?raw=true)
 
-
+There are 9 seasons inwhich the Treehouse of Horror is the maximum, 9 fall within the IQR box (between first and third quartile), and  only 1 falls below the box. 
 
 So the Treehouse Episodes seem to be a bit, but not significantly, above average. This makes sense in hindsight, as they are still a product of the season's staff, and likely don't get *that* much more attention than other episodes. 
 
