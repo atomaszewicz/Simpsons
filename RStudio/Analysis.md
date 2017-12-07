@@ -119,16 +119,14 @@ There are 9 seasons in which the Treehouse of Horror is the highest-rated episod
 
 ## Conclusion
 
-The Simpsons exploded onto TV's in the late 90's, where it stirred up as much fandom as it did controversy. 28 seasons later (one more until it's the longest-running tv series) it's format and style has been copied so many times it's hard to appreciate how cutting-edge it was when it premiered. In fact the show is now such a staple of our culture that Simpson's webpages posting 20 year-old [screenshots](https://www.instagram.com/thesimpsonsig/) or [quotes](https://twitter.com/SimpsonsQOTD) can have hundreds of thousands of followers, and where "The Simpsons did it" is a culture phenomon [pointed out by the show South Park](https://en.wikipedia.org/wiki/Simpsons_Already_Did_It) where writers subconciously copy plot elements from the show.
+The Simpsons exploded onto TV's in the late 90's, where it stirred up as much fandom as it did controversy. 28 seasons later it's format and style has been copied so many times it's hard to appreciate how cutting-edge it was when it premiered. In fact the show is now such a staple of our culture that Simpson's webpages posting 20 year-old [screenshots](https://www.instagram.com/thesimpsonsig/) or [quotes](https://twitter.com/SimpsonsQOTD) can have hundreds of thousands of followers, and where "The Simpsons did it" is a culture phenomon [pointed out by the show South Park](https://en.wikipedia.org/wiki/Simpsons_Already_Did_It) where writers subconciously copy plot elements from the show.
 
-The show has gone through hundreds of writers, animators, and directors, many of which have gone on to do great careers. Being such a breeding ground for young talent has made long-term staff no such luxury, which inveitably causes  has forced the show to continually stuggle to find new talent. 
+The show has gone through hundreds of writers, animators, and directors, many of whom have gone on to have great careers (including everyone's favorite [orange-haired late night host](http://1075koolfm.com/wp-content/uploads/2017/05/Conan-1.jpg)). This comes at a cost since being such a strong breeding ground for young talent has not afforded long-term staff, and losing a large portion of your staff every year certainly doesn't help stability. While obviously constantly losing your best talent doesn't make keeping your show new and original very easy, I don't think that is the main reason behind the show's decline. 
 
-Rating the show as a whole proved to give it a higher score than the average over episodes (8.8 and 7.4 respectively) which could be due to fans not watching the show after it's decline or simply remembering the good times. As far as the evolution of the quality goes, it seems that the so-called "Golden Age" is real, as the season average starting in season 2 and ending in season 8 are all above 8.0, peaking in season 5 at 8.4/10. 
+In my mind The Simpsons was so ground-breaking that it couldn't possibly have stayed that way forever. It was such a popular and influential show that eventually the landscape of television would be just as foul and vulgar. On top of that, with 600+ scripts in it's wake, it is understandably difficult to create fresh and new ideas with the same old characters. 
 
-The other stellar episodes 
+However much the quality has dropped and however few fans that remain, it's hard to imagine a day where The Simpsons is taken off the air. A lot of fans complain that it shld've been axed a long time ago, but I think they'll all shed a tear when soon the world's longest running show has it's curtain call. Then again, they may never [stop the simpsons](https://www.youtube.com/watch?v=CZYNwzeqVUA).
 
-
- has bread so many kin, that it's hard to appreciate how  [recent discussions about the show's stereotypes ](http://www.trutv.com/shows/the-problem-with-apu/index.html), i
 
 
 
