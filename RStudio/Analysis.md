@@ -115,9 +115,20 @@ As we saw earlier is "Treehouse of Horror V", which is rated 9.1, is one of the 
 
 ![treehouse_boxplot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/treehouse_boxplot.png?raw=true)
 
-There are 9 seasons inwhich the Treehouse of Horror is the maximum, 9 fall within the IQR box (between first and third quartile), and  only 1 falls below the box. 
+There are 9 seasons in which the Treehouse of Horror is the highest-rated episode, and 2 that fall at or below the median. So these are certainly above-average episodes, but rating-wise they are not only noticeably higher higher (7.6 compared to series-mean of 7.4). This makes sense in hindsight, as they are still a product of the season's staff, and likely don't get *that* much more attention than other episodes. 
 
-So the Treehouse Episodes seem to be a bit, but not significantly, above average. This makes sense in hindsight, as they are still a product of the season's staff, and likely don't get *that* much more attention than other episodes. 
+## Conclusion
+
+The Simpsons exploded onto TV's in the late 90's, where it stirred up as much fandom as it did controversy. 28 seasons later (one more until it's the longest-running tv series) it's format and style has been copied so many times it's hard to appreciate how cutting-edge it was when it premiered. In fact the show is now such a staple of our culture that Simpson's webpages posting 20 year-old [screenshots](https://www.instagram.com/thesimpsonsig/) or [quotes](https://twitter.com/SimpsonsQOTD) can have hundreds of thousands of followers, and where "The Simpsons did it" is a culture phenomon [pointed out by the show South Park](https://en.wikipedia.org/wiki/Simpsons_Already_Did_It) where writers subconciously copy plot elements from the show.
+
+The show has gone through hundreds of writers, animators, and directors, many of which have gone on to do great careers. Being such a breeding ground for young talent has made long-term staff no such luxury, which inveitably causes  has forced the show to continually stuggle to find new talent. 
+
+Rating the show as a whole proved to give it a higher score than the average over episodes (8.8 and 7.4 respectively) which could be due to fans not watching the show after it's decline or simply remembering the good times. As far as the evolution of the quality goes, it seems that the so-called "Golden Age" is real, as the season average starting in season 2 and ending in season 8 are all above 8.0, peaking in season 5 at 8.4/10. 
+
+The other stellar episodes 
+
+
+ has bread so many kin, that it's hard to appreciate how  [recent discussions about the show's stereotypes ](http://www.trutv.com/shows/the-problem-with-apu/index.html), i
 
 
 
