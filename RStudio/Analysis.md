@@ -158,6 +158,11 @@ gold_rate<-ggplot(gold_age,aes(x=total_ep_num,y=rating,col=season_num))+geom_poi
 horror_bar<-ggplot(subset(season_avg,season_num>=2),aes(x=season_num,y=rating))+geom_col()+coord_cartesian(ylim=c(6.5,9.2),xlim=c(2,28))+scale_x_continuous(breaks=c(5,10,15,20,25))+geom_line(data=halloween,aes(x=season_num,y=rating),col="orange")+xlab("Season Number")+ylab("IMDb Rating")+ggtitle("Scared Jagged",subtitle="The Simpsons")+annotate("text",x=10.5,y=8.75,label="Treehouse of Horror",col="orange")+scale_color_discrete(guide=FALSE)+annotate("text",x=12,y=8.3,label="Season Average",col="grey30")
 ```
 
+### Spooky Box
+```
+spooky<-ggplot(simp,aes(x=season_num,y=rating))+geom_boxplot(outlier.shape=NA)+geom_line(data=halloween,aes(x=season_num,y=rating),col="orange",size=1)+coord_cartesian(xlim=c(2,28),ylim=c(6,9.5))+scale_x_discrete(breaks=c(5,10,15,20,25))+xlab("Season Number")+ylab("IMDb Rating")+ggtitle("Scared Jagged",subtitle="The Simpsons, Box Plot of Season Averages Comapred with Halloween Specials")+annotate("text",x=13,y=8.4,label="Treehouse of Horror",col="orange")
+```
+
 # Footnotes 
 
 <sup> [1] </sup>
