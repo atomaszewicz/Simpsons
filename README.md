@@ -35,13 +35,13 @@ The exact beginning and ending of the "Golden Age" is a hotly debated topic amon
 
 ![avg_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/avg_rating_plot.png?raw=TRUE)
 
-Seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 averages are above 7.0, and seasons 17-28 are in the range 6.5-7.0. Since I like whole numbers I'll choose to cut off the "Golden Age" at an average score of 8.0. So we're left with seasons 2-8 being the show at it's peak. During season 1 the show was still finding it's footing, and from 9-16 it was slowly losing it's quality.
+Seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 averages are above 7.0, and seasons 17-28 are in the range 6.5-7.0. Since I like whole numbers I'll choose to cut off the "Golden Age" at an average score of 8.0. So we're left with seasons 2-8 being the show at it's peak. 
 
-These 6 seasons is when then show was in peak form, still finding it's footing before, and the show losing it's edge after. But how does quality fluctuate during this period?
+These 6 seasons is when then show was in peak form, still finding it's footing before, and the show losing it's edge after. But how does quality fluctuate during this "Golden Age"?
 
 ![gold_rate1](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate1.png?raw=TRUE)
 
-The trend curve shows that the IMDb score doesn't fluctuate that much during the "Golden Age", the difference between the max and min of the regression is less than 2/5 of a point (with a linear regression this difference shrinks to 0.07 points). Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore just above 1 compared to the series average of 7.4. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
+The trend curve shows that the IMDb score doesn't fluctuate that much during the 6 golden seasons. Modelling the quality %% the difference between the max and min of the regression is less than 2/5 of a point (with a linear regression this difference shrinks to 0.07 points). Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore just above 1 compared to the series average of 7.4. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
 
 ## Treehouse of Horror
 
