@@ -41,17 +41,17 @@ These 6 seasons is when then show was in peak form, still finding it's footing b
 
 ![gold_rate1](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/gold_rate1.png?raw=TRUE)
 
-The trend curve shows that the IMDb score doesn't fluctuate that much during the 6 golden seasons. Modelling the quality %% the difference between the max and min of the regression is less than 2/5 of a point (with a linear regression this difference shrinks to 0.07 points). Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore just above 1 compared to the series average of 7.4. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
+The trend curve shows that the IMDb score doesn't fluctuate that much during the 6 golden seasons. A curve fitted to the ratings fluctuates little over the period. The difference between the max and min of the regression is less than 2/5 of a point (with a linear fit this difference shrinks to 0.07 points). Lastly, the average "Golden Age" episode rating is 8.2, which has a zscore just above 1 compared to the series average of 7.4. So it seems the "Golden Age" is real, the show did have 6 seasons where the episodes were fairly consistent in quality. 
 
 ## Treehouse of Horror
 
-On the topic of higher-than-average quality, The Simpson's annual "Treehouse of Horror" episodes are some of my personal favorite episodes, and with Halloween only a couple weeks away, what better time to find out if these episodes are truly great, or I'm clouded by the fun of the spooky atmosphere.
+On the topic of higher-than-average quality, The Simpson's annual "Treehouse of Horror" (ToH) episodes are some of my personal favorite episodes, and with Halloween only a couple weeks away, what better time to find out if these episodes are truly great, or i'm clouded by the fun of the spooky atmosphere.
 
-For the past 27 Halloweens The Simpsons has aired a triplet of shorts that pay homage to, or parody, films, television shows, literature, EC Comics, and of course episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the show's [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) and imagine the characters in new ways. However, these are some of the most fun episodes, and the insane skills of the animators and writers are showcased as they raise the bar year after year.
+For the past 27 Halloweens The Simpsons has aired a triplet of shorts that pay homage to, or parody, films, television shows, comics, and of course episodes of [The Twilight Zone](https://www.youtube.com/watch?v=SFokFDyDGgs). These episodes allow the writers to break the show's [canon](https://en.wikipedia.org/wiki/Canon_(fiction)) and write the characters in fantastic situations. 
 
-The ToH episodes score slightly above average, with a mean of 7.6 compared with the series 7.4, and the "Golden Age" ToH episodes average 8.5, compared with the 6-season average of 8.2. The season-normalized scores tell us that the Halloween specials are 4% better than an average episode that season. 
+As we saw earlier "Treehouse of Horror V", which is rated 9.1, is one of the series highest scoring episodes, while the worst ToH episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which scores 6.6, with a zscore of -1 for the series, and -0.2 for that season.  
 
-As we saw earlier is "Treehouse of Horror V", which is rated 9.1, is one of the series highest scoring episodes, but the worst ToH episode, and the only installment with a score lower than the season's average, is the 22nd installment of the Halloween special, which scores 6.6, with a zscore of -1 for the series, and -0.2 for that season. 
+Though all but one ToH episodes score above average, they don't score that far above the mean. The ToH episodes average score is 7.6 compared with the series 7.4. Even during the "Golden Age" the ToH shows stand out, averaging 8.5 compared with the overall 6-season average of 8.2.
 
 ![treehouse_boxplot](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/treehouse_boxplot.png?raw=true)
 
