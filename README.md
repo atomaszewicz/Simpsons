@@ -31,11 +31,11 @@ We note that the zscores for the worst episodes are larger (in magnitude) than t
 
 ## Golden Years
 
-The exact beginning and ending of the "Golden Age" is a hotly debated topic amongst fans, but it is usually thoght of as starting around season 2 or 3 and ending around season 11 or 12 ([here is one artist's opinion](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/1467480120160.jpg)). This "Golden Age" corresponds to the peak we saw in the plot of IMDb scores, but how do quantify when it started and when it ends? 
+The exact beginning and ending of the "Golden Age" is a hotly debated topic amongst fans, but the general concensus is that it starts around season 2 or 3 and ends around season 11 or 12 ([here is one artist's opinion](https://github.com/atomaszewicz/Simpsons/blob/master/RStudio/Plots/1467480120160.jpg)). To quantify the period we can look at the IMDb scores and find the max the peak but how do quantify when it started and when it ends? Let's start by looking at the average score for each season.
 
 ![avg_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/avg_rating_plot.png?raw=TRUE)
 
-Seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 averages are above 7.0, and seasons 17-28 are in the range 6.5-7.0. We decide, somewhat arbitrarily, to cut off the "Golden Age" at an average score of 8.0, which gives us seasons 2 through 8. 
+Seasons 2-8 have an average rating of above 8.0, season 1 & 9-16 averages are above 7.0, and seasons 17-28 are in the range 6.5-7.0. Since I like whole numbers I'll choose to cut off the "Golden Age" at an average score of 8.0. So we're left with seasons 2-8 being the show at it's peak. During season 1 the show was still finding it's footing, and from 9-16 it was slowly losing it's quality.
 
 These 6 seasons is when then show was in peak form, still finding it's footing before, and the show losing it's edge after. But how does quality fluctuate during this period?
 
