@@ -4,19 +4,17 @@ As The Simpsons embark's on it's 29th season in a month's time (a seaons during 
 
 ## Voting
 
-To fully understand the IMDb ratings, we will look who was submitting these votes in an effort to give some context to the scores. Scraping the user data for each episode proved quite difficult, so instead we will look at the [demographic breakdown for the series overall](http://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_).
+Before we get into how the show is rated, I think it is important to understand who is voting for the IMDb ratings.
 
-The series is mostly voted on by Males aged 18-45, with the 30-45 portion being the demographic that likes the show the best (they rate it 8.9/10) and the 18-29s rate the series the same as the overall (8.8/10). Men & Women under 18 make up less than half a percent of the total votes (we will come back to this later) though they still rate it 8.7, but the group that rates the show the lowest is Women 45+ who give it a measly 7.9/10.
+First the voting on the series as a whole. [On IMDb](https://www.imdb.com/title/tt0096697/ratings?ref_=tt_ov_rt_) The Simpsons gets an 8.8/10. It is mostly voted on by males, who account for 80% of the votes. 30-45 year-old males seem to like the show the best, rating it 8.9/10. Those under 18 make up less than half a percent of the total votes, though they still rate it quite highly 8.7. The group that gives the show the lowest rating is women 45 years and older, who give it a 7.9/10.
 
-So we understand the demographic groups that are doing the most voting, but how has the macro-view voting population changed over the show's run?
+Now the voting by episode. We notice a clear downward trend, which amounts to the show losing 2 votes every episode. This is likely a result of the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but probably also a factor of the show's nearly 30-year run meaning the early episodes have been replayed more (and thus have been seen and voted-on more).
 
 ![ep_votes_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_votes_plot2.png?raw=TRUE)
 
-We notice a clear downward trend, which amounts to the show losing 2 votes every episode. This is likely a result of the [show's decreasing audience](https://en.wikipedia.org/wiki/The_Simpsons#Reception_and_achievements), but probably also a factor of the show's nearly 30-year run meaning the early episodes have been replayed more (and thus have been seen and voted-on more) than recent ones.
-
 ## Scoring
 
-The average episode score is 7.4 with a standard deviation of 0.75. This contrasts with the 8.8/10 rating for the series overall, which makes it the 54th highest rated show on IMDb. Seeing as the opinion of an average episode is significantly lower than of the series overall, we get our first hint that the show's quality hasn't been consistant. As most Simpsons fans will tell you, the show's quality has ebbed and flowed over the years, so let's see if the IMDb scores reflect this. 
+The average episode score on IMDb is 7.4 with a standard deviation of 0.75. This contrasts with the 8.8/10 rating for the series overall (a number which makes it the 54th highest rated show on IMDb). Seeing as the opinion of an average episode is significantly lower than of the series overall, we get our first hint that the show's quality hasn't been consistant. As most Simpsons fans will tell you, the show's quality has ebbed and flowed over the years, so let's see if the IMDb scores reflect this. 
 
 ![ep_rate_plot](https://raw.githubusercontent.com/atomaszewicz/Simpsons/master/RStudio/Plots/ep_rate_plot.png?raw=TRUE)
 
